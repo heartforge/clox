@@ -1,5 +1,8 @@
 # clox
 
+### Execution
+`clang -o main main.c chunk.c memory.c debug.c value.c`
+
 ### Instructions
 Instructions are represent:wed by bytecode in a struct called Chunk.
 
