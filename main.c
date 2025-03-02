@@ -14,9 +14,8 @@ int main(int argc, char *argv[]) {
   writeChunk(&chunk, OP_CONSTANT, 123);
   writeChunk(&chunk, constant, 123);
 
-  // Write 3 byte constant using OP_CONSTANT_LONG opcode.
-  writeChunk(&chunk, OP_CONSTANT_LONG, 123);
-  writeConstant(&chunk, 123456789, 123);
+  // Negate
+  writeChunk(&chunk, OP_NEGATE, 123);
 
   // Return using OP_RETURN.
   writeChunk(&chunk, OP_RETURN, 123);
