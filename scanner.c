@@ -18,15 +18,6 @@ void initScanner(const char *source) {
   scanner.line = 1;
 }
 
-Token scanToken() {
-  scanner.start = scanner.current;
-
-  if (isAtEnd())
-    return makeToken(TOKEN_EOF);
-
-  return errorToken("Unexpected character.");
-}
-
 static bool isAtEnd() { return *scanner.current == '\0'; }
 
 static Token makeToken(TokenType type) {
@@ -45,4 +36,13 @@ static Token errorToken(const char *message) {
   token.length = (int)strlen(message);
   token.line = scanner.line;
   return token;
+}
+
+Token scanToken() {
+  scanner.start = scanner.current;
+
+  if (isAtEnd())
+    return makeToken(TOKEN_EOF);
+
+  return errorToken("Unexpected character.");
 }
