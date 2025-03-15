@@ -11,3 +11,6 @@ All constants are stored together in a section of memory. Each chunk will carry 
 
 ### Resered Keywords
 Reserved keyword identification is implemented using tries and state machines.
+
+### Parser
+Uses Vaughan Pratt's top-down operator precedence parsing.
