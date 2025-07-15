@@ -49,7 +49,7 @@ static InterpretResult run() {
   do {                                                                         \
     if (!IS_NUMBER(peek(0)) || !IS_NUMBER(peek(1))) {                          \
       runtimeError("Operands must be numbers.");                               \
-      return INTERNET_RUNTIME_ERROR;                                           \
+      return INTERPRET_RUNTIME_ERROR;                                          \
     }                                                                          \
     double b = AS_NUMBER(pop());                                               \
     double a = AS_NUMBER(pop());                                               \
