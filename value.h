@@ -26,9 +26,7 @@ typedef struct {
 
 #define BOOL_VAL(value) ((Value){VAL_BOOL, {.boolean = value}})
 #define NIL_VAL ((Value){VAL_NIL, {.number = 0}})
-#define NUMBER_VAL(val) ((Value){VAL_NUMBER, {.number = value}})
-
-typedef double Value;
+#define NUMBER_VAL(value) ((Value){VAL_NUMBER, {.number = value}})
 
 typedef struct {
   int capacity;
